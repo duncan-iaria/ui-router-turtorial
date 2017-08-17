@@ -1,0 +1,35 @@
+{
+  "name": "ui-router-turtorial",
+  "version": "0.0.1",
+  "description": "Learning UI-Router and Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duncan-iaria/ui-router-turtorial.git"
+  },
+  "keywords": [
+    "Webpack",
+    "UI-Router",
+    "Angular",
+    "1.6"
+  ],
+  "author": "duncan iaria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duncan-iaria/ui-router-turtorial/issues"
+  },
+  "homepage": "https://github.com/duncan-iaria/ui-router-turtorial#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "webpack": "^3.5.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.1"
+  }
+}
