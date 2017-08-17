@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="build/bundle.js"></script>
+
+    <style>.active { color: red; font-weight: bolder; }</style>
+
     <title>Angular Test</title>
 </head>
 <body ng-app="app">
-	<a ui-sref="hello">hello</a>
-	<a ui-sref="about">About</a>
+	<a ui-sref="hello" ui-sref-active="active">hello</a>
+	<a ui-sref="about" ui-sref-active="active">About</a>
 	
 	<ui-view></ui-view>
 </body>
