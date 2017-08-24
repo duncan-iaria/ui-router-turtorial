@@ -22,13 +22,15 @@
 
 function config( $stateProvider )
 {
-    const helloState = {
+    const helloState = 
+    {
         name: 'hello',
         url: '/hello',
-        template: '<h3>Hello World</h3>'
+        component: 'hello',
     }
 
-    const aboutState = {
+    const aboutState =
+    {
         name: 'about',
         url: '/about',
         template: '<h3>About The World</h3>'
