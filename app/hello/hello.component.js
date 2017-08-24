@@ -1,16 +1,12 @@
+import HelloController from './hello.controller';
+
+//=========================
+// COMPONENT
+//=========================
 const hello = 
 {
-    template: '<h3>hello</h3><button ng-click="$ctrl.toggleGreeting()">press button</button>',
-
-    controller: function()
-    {
-        this.greeting = 'hello',
-
-        this.toggleGreeting = function()
-        {
-            console.log( "hey" );
-        }
-    }
+    template: require( './hello.html' ),
+    controller: HelloController
 };
 
 export default hello;

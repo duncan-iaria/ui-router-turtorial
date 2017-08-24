@@ -1,15 +1,13 @@
+import AboutController from './about.controller.js';
+
 const about = 
 {
-    template: "<h3>What's this all about?</h3><button ng-click='$ctrl.toggleGreeting()'>press button</button>",
+    template: require( './about.html' ),
+    controller: AboutController,
 
-    controller: function()
+    bindings: 
     {
-        this.greeting = 'hello',
-
-        this.toggleGreeting = function()
-        {
-            console.log( "about what?" );
-        }
+        people: '<'
     }
 };
 
