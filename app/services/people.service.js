@@ -21,7 +21,7 @@ export default class PeopleService
     sendResponse( tData )
     {
         console.log( `people = ${tData}` );
-        console.log( JSON.stringify( tData, null, 2 ) );        
+        console.log( JSON.stringify( tData, null, 2 ) );       
 
         return tData;
     }

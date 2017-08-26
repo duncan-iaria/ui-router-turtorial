@@ -18,17 +18,25 @@ function config( $stateProvider )
         name: 'about',
         url: '/about',
         component: 'about',
+    }
+
+    const peopleState =
+    {
+        name: 'people',
+        url: '/people',
+        component: 'people',
         resolve: 
         {
             people: [ 'PeopleService' , ( PeopleService ) => 
             {
-                PeopleService.getAllPeople()
+                return PeopleService.getAllPeople()
             }]
         }
     }
 
     $stateProvider.state( helloState );
     $stateProvider.state( aboutState );
+    $stateProvider.state( peopleState );
 }
 
 //=========================
