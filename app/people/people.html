@@ -1,5 +1,4 @@
 <div>
-    <ng-repeat="person in peopleController.people">Person</ng-repeat>
-    
+    <div ng-repeat="person in peopleController.people.data">{{person.name}}</div>
     <button ng-click="peopleController.checkPeople()">Check People</button>
 </div>

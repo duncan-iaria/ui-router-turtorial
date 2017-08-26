@@ -8,21 +8,17 @@ export default class PeopleService
 
     getPerson( tId )
     {
-
+        
     }
 
     getAllPeople()
     {
-        let tempPeople;
-
-        this.$http.get( 'data/people.json', { cache: true } ).then( this.sendResponse );
+        return this.$http.get( 'data/people.json', { cache: true } ).then( this.sendResponse );
     }
 
     sendResponse( tData )
     {
-        console.log( `people = ${tData}` );
-        console.log( JSON.stringify( tData, null, 2 ) );       
-
+        // console.log( JSON.stringify( tData, null, 2 ) );
         return tData;
     }
 }

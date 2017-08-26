@@ -29,7 +29,7 @@ function config( $stateProvider )
         {
             people: [ 'PeopleService' , ( PeopleService ) => 
             {
-                return PeopleService.getAllPeople()
+                return PeopleService.getAllPeople();
             }]
         }
     }
