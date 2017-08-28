@@ -25,11 +25,25 @@ function config( $stateProvider )
         name: 'people',
         url: '/people',
         component: 'people',
-        resolve: 
+        resolve:
         {
-            people: [ 'PeopleService' , ( PeopleService ) => 
+            people: [ 'PeopleService', ( PeopleService ) => 
             {
                 return PeopleService.getAllPeople();
+            }]
+        }
+    }
+
+    const personState =
+    {
+        name: 'person',
+        url: '/person/{personId}',
+        component: 'person',
+        resolve:
+        {
+            person: [ 'PeopleService', '$transition$', ( PeopleService, $transition$ ) =>
+            {
+                return PeopleService.getPerson( $transition$.params().personId );
             }]
         }
     }
@@ -37,6 +51,7 @@ function config( $stateProvider )
     $stateProvider.state( helloState );
     $stateProvider.state( aboutState );
     $stateProvider.state( peopleState );
+    $stateProvider.state( personState );
 }
 
 //=========================

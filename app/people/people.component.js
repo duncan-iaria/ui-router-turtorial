@@ -15,4 +15,8 @@ const people =
     }
 };
 
+
+//=========================
+// EXPORTS
+//=========================
 export default people;

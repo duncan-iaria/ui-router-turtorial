@@ -9,4 +9,7 @@ const hello =
     controller: HelloController
 };
 
+//=========================
+// EXPORTS
+//=========================
 export default hello;

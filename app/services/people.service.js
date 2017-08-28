@@ -8,7 +8,22 @@ export default class PeopleService
 
     getPerson( tId )
     {
-        
+        //return all people then find one (passing collection of what was found)
+        return this.getAllPeople().then( findPerson );
+
+        //pass in a collect of people from all people
+        function findPerson( tPeople )
+        {
+            //console.log( tPeople );
+            //find function of an array, looks based on expression
+            return tPeople.find( personMatchesParam );
+        }
+
+        //find expression
+        function personMatchesParam( person )
+        {
+            return person.id === tId;
+        }
     }
 
     getAllPeople()
@@ -19,6 +34,6 @@ export default class PeopleService
     sendResponse( tData )
     {
         // console.log( JSON.stringify( tData, null, 2 ) );
-        return tData;
+        return tData.data;
     }
 }
