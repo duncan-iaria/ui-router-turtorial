@@ -1,4 +1,7 @@
 <div>
-    <div ng-repeat="person in peopleController.people">{{person.name}}</div>
+    <div ng-repeat="person in peopleController.people">
+        <a ui-sref="person({ personId: person.id })">{{person.name}}</a>
+
+    </div>
     <button ng-click="peopleController.checkPeople()">Check People</button>
 </div>

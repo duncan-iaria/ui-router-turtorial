@@ -2,7 +2,7 @@ export default class PeopleService
 {
     constructor( $http )
     {
-        console.log( `call me when you need me` );
+        //cache the injected service (required with class syntax)
         this.$http = $http;
     }
 
@@ -14,7 +14,6 @@ export default class PeopleService
         //pass in a collect of people from all people
         function findPerson( tPeople )
         {
-            //console.log( tPeople );
             //find function of an array, looks based on expression
             return tPeople.find( personMatchesParam );
         }
@@ -28,12 +27,12 @@ export default class PeopleService
 
     getAllPeople()
     {
+        //get all people from the people json then send a response (which returns the data)
         return this.$http.get( 'data/people.json', { cache: true } ).then( this.sendResponse );
     }
 
     sendResponse( tData )
     {
-        // console.log( JSON.stringify( tData, null, 2 ) );
         return tData.data;
     }
 }
